@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner user = new Scanner(System.in);
+     
+      String usMove = "";
+      String com = "";
+      String result =  "";
+      
+     System.out.println("Enter your move:");
+     System.out.println("ROCK-0, PAPER-1, SCISSORS-2");
+     String userInput = user.nextLine();
+     
+     if (userInput == "0"){
+      usMove = "rock";
+     }else if (userInput == "1"){
+       usMove = "paper";
+       
+     }else if (userInput == "2") {
+       usMove = "scissors";
+     }
+     System.out.println("you pick:" + usMove);
+     
+     double ran = Math.random() * 2;
+     double random = Math.round(ran);
+     
+     if (random == 0){
+       com = "rock";
+     }else if (random == 1){
+       com = "paper";
+     }else if (random == 2) {
+       com = "scissors";
+     }
+     System.out.println("The computer Pick " + com);
+     
+     if (com == "rock" & usMove == "paper"){
+       result = "Win";
+     }else if (com == "rock" & usMove == "rock"){
+       result = "Tie";
+     }else if (com == "rock" & usMove == "scissors"){
+       result = "Lose";
+     }
+     
+     if (result == "Win" ){
+     System.out.println("You"+ result);
+     }else if (result == "Tie"){
+       System.out.println("its a" + result);
+       
+     }else{
+        System.out.println("You"+ result);
+     }
+     //kupal tinatamd nako HAHAHAHA  kayo nalang magtuloy puro lang naman 
+     //statement kaya nyo na yan hehe 
+    
+  }
+}
