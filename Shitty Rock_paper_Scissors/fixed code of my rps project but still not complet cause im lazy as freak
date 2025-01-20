@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner user = new Scanner(System.in);
+
+        String com = "";
+        String result = "";
+        
+        System.out.println("Enter your move:");
+        System.out.println("ROCK-0, PAPER-1, SCISSORS-2");
+
+        String userInput = user.nextLine();
+
+        String usMove = "";
+
+        // Determine user move based on input
+        if (userInput.equals("0")) {
+            usMove = "rock";
+        } else if (userInput.equals("1")) {
+            usMove = "paper";
+        } else if (userInput.equals("2")) {
+            usMove = "scissors";
+        }
+
+        System.out.println("You chose: " + usMove);
+
+        // Generate a random move for the computer (0, 1, or 2)
+        double ran = Math.random() * 3;  // Changed to 3 to generate 0, 1, or 2
+        int random = (int) Math.round(ran);  // Cast to int to match the condition
+
+        if (random == 0) {
+            com = "rock";
+        } else if (random == 1) {
+            com = "paper";
+        } else if (random == 2) {
+            com = "scissors";
+        }
+
+        System.out.println("The computer chose: " + com);
+
+        // Determine the result of the game
+        if (usMove.equals("rock") && com.equals("scissors") || 
+            usMove.equals("paper") && com.equals("rock") || 
+            usMove.equals("scissors") && com.equals("paper")) {
+            result = "Win";
+        } else if (usMove.equals(com)) {
+            result = "Tie";
+        } else {
+            result = "Lose";
+        }
+
+        // Output the result
+        System.out.println("You " + result);
+
+    }
+
+}
