@@ -13,7 +13,7 @@ public class Main {
       Flappybird flappybird = new Flappybird();
       frame.add(flappybird);
       frame.pack();
-      flappybird.requestFocus();
+      flappybird.requestFocus(); 
       frame.setVisible(true);
 
 
