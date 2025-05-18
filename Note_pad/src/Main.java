@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 import java.io.FileReader;
-public class Main {
+public class Main {  
    private ArrayList<String> notes = new ArrayList<String>();
     private ArrayList<String> titles = new ArrayList<String>();
     
@@ -154,7 +154,7 @@ public class Main {
             notes.remove(i);
 
             // only remove from titles if index is valid
-            if (i < titles.size()) {
+            if (i < titles.size()) {// where doing this because if notes and titles arraylist are not equal number of values. 
                 titles.remove(i);
             }
 
