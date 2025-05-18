@@ -1,6 +1,10 @@
-import java.util.*;
+//import java.util.*;
 import java.io.*;
 import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
 public class Main {  
    private ArrayList<String> notes = new ArrayList<String>();
     private ArrayList<String> titles = new ArrayList<String>();
