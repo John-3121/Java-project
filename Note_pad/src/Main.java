@@ -181,9 +181,9 @@ public class Main {
         String note = notes.get(i);
         if (note.startsWith("Title:" + remove)) {
             notes.remove(i);
-
+            
             // only remove from titles if index is valid
-            if (i < titles.size()) {
+            if (i < titles.size()) {//this helps us get rid the error cause if both list is not the same value of number where gonna get an error
                 titles.remove(i);
            }
 
