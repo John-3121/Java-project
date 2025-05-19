@@ -50,9 +50,9 @@ public class Main {
         System.out.println("1.Enter a note\n2.View notes\n3.Remove note");
         Scanner input = new Scanner(System.in);
         Main main = new Main();
-        
+        try{
        int exit = input.nextInt();
-        System.out.println("----------------");
+            System.out.println("----------------");
         if(exit == 1){
             EnterNote(exit);
             
@@ -66,7 +66,13 @@ public class Main {
         }
         else{
             System.out.println("Invalid input");
+            run();
         }
+        }catch(InputMismatchException e){
+            System.out.println("Invalid input:" + e);
+            run();
+        }
+        
         
     }
     
